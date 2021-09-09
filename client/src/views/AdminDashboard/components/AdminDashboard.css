@@ -1,7 +1,15 @@
 /* fonts */
+
+
+
+/* Questrial */
 @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+/* Quicksand */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 
 
+
+/* This is for the Dashboard's CSS */
 .admin-wrapper {
     background-image: url('./background.png');
     background-repeat: no-repeat;
@@ -16,6 +24,9 @@
     margin-bottom: 1.25em;
 }
 
+
+
+/* This is for the Grid CSS */
 .grid-container { 
     display: grid;
     grid-gap: 0.625em;
@@ -32,6 +43,9 @@
 .item3 {grid-area: breakdown;}
 .item4 {grid-area: ongoing;}
 
+
+
+/* This is for the Ongoing Order Grid Area */
 .ongoing-order-wrapper {
     background-color: white;
     color: black;
@@ -41,14 +55,125 @@
     justify-content: center;
 }
 
-.text-wrapper {
-    margin: auto;
-}
-
 .ongoing-order-wrapper h1 {
     font-family: 'Questrial', sans-serif;
     font-style: bold;
     font-size: 2.5em;
     display: inline;
     text-align: center;
+}
+
+
+
+/* This is for the OrderTracker CSS */
+.order-tracker-wrapper {
+    background-color: white;
+    color: black;
+    border-radius: 8px;
+}
+
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2em;
+}
+
+.order-header h1 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.875em;
+    font-style: bold;
+}
+
+.add-order-btn {
+    background-color: #000;
+    color: white;
+    font-size: 1.25em;
+    font-family: 'Quicksand', sans-serif;
+    height: 1.5625em;
+    margin: auto 0;
+    border: none;
+    padding: 4px 1.25em;
+    border-radius: 11px;
+}
+
+.add-order-btn:hover {
+    cursor: pointer;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+.order-table-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    padding: 0 4em;
+}
+
+.order-table-header p {
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+    font-size: 0.9375em;
+}
+
+.order-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 4em;
+}
+
+.order-wrapper p {
+    font-family: 'Quicksand', sans-serif;
+    color: black;
+    font-size: 0.9375em;
+}
+
+/* Ongoing and Finished Status */
+
+.ongoing-wrapper {
+    display: flex;
+    justify-content: space-between;
+    background-color: #FFBB95;
+    color: black;
+    font-family: "Quicksand", sans-serif;
+    border-radius: 19px;
+    width: 6.25em;
+    height: 2em;
+    margin: auto 0;
+}
+
+.ongoing-wrapper h1 {
+    font-size: 0.8125em;
+    margin: auto;
+}
+
+.orange {
+    border-radius: 50%;
+    background-color: #D04E05;
+    width: 0.625em;
+    height: 0.625em;
+    margin: auto;
+}
+
+.finished-wrapper {
+    display: flex;
+    justify-content: space-between;
+    background-color: #D1E0BD;
+    color: black;
+    font-family: "Quicksand", sans-serif;
+    border-radius: 19px;
+    width: 6.25em;
+    height: 2em;
+    margin: auto 0;
+}
+
+.finished-wrapper h1 {
+    font-size: 0.8125em;
+    margin: auto;
+}
+
+.green {
+    border-radius: 50%;
+    background-color: #3D9528;
+    width: 0.625em;
+    height: 0.625em;
+    margin: auto;
 }

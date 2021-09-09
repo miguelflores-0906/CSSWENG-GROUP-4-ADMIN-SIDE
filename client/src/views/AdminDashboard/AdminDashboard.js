@@ -2,6 +2,7 @@ import React from 'react'
 import NavBar from '../NavBar/Navbar'
 import './components/AdminDashboard.css'
 import OngoingOrders from './components/OngoingOrders'
+import OrderTracker from './components/OrderTracker'
 
 const AdminDashboard = () => {
     return (
@@ -11,9 +12,7 @@ const AdminDashboard = () => {
                 <h1 className= "title ">ADMIN DASHBOARD</h1>
                 <div className="grid-container">
                     <div className="item1">
-                        Order Tracker <br/>
-                        Order Tracker <br/>
-                        Order Tracker <br/>
+                        <OrderTracker/>
                     </div>
                     <div className="item2">
                         Monthly Income <br/>
