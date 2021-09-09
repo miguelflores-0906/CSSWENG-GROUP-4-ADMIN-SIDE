@@ -14,7 +14,7 @@
     background-image: url('./background.png');
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 1.25em;
+    padding: 3.5em;
 }
 
 .title {
@@ -192,4 +192,82 @@
 
 .monthly-income-wrapper h1 {
     font-size: 1.875em;
+}
+
+
+
+/* This is for the Finance Breakdown CSS */
+.finance-breakdown-wrapper {
+    background-color: white;
+    color:black;
+    border-radius: 8px;
+
+    font-family: "Quicksand", sans-serif;
+}
+
+.finance-breakdown-header {
+    display: flex;
+    justify-content: space-between;
+    margin:0;
+    padding: 1.5em 2em;
+    border-bottom: 1px solid black;
+}
+
+.finance-dropdown {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+    border-radius: 8px;
+    height: 1.5625em;
+}
+
+.finance-dropdown p {
+    font-size: 0.875em;
+    margin: auto 5px;
+}
+
+.view-breakdown-btn {
+    background-color: #000;
+    color: white;
+    font-size: 1.25em;
+    font-family: 'Quicksand', sans-serif;
+    height: 1.5625em;
+    margin: auto 0;
+    border: none;
+    padding: 4px 1.25em;
+    border-radius: 11px;
+}
+
+.view-breakdown-btn:hover {
+    cursor: pointer;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+.finance-summary {
+    display: flex;
+    justify-content: space-between;
+}
+
+.expense-summary {
+    margin: auto 4em;
+}
+
+.expense-summary h2 {
+    font-size: 1.25em;
+}
+
+.expense-display {
+    display: flex;
+    justify-content: space-between;
+}
+
+.expense-display h1 {
+    font-size: 1.875em;
+    margin: auto 0.5em auto 0;
+}
+
+.finance-logo {
+    width: 17px;
+    height: 17px;
+    margin: auto;
 }

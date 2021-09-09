@@ -4,6 +4,7 @@ import './components/AdminDashboard.css'
 import OngoingOrders from './components/OngoingOrders'
 import OrderTracker from './components/OrderTracker'
 import MonthlyIncome from './components/MonthlyIncome'
+import FinanceBreakdown from './components/FinanceBreakdown'
 
 const AdminDashboard = () => {
     return (
@@ -19,8 +20,7 @@ const AdminDashboard = () => {
                         <MonthlyIncome />
                     </div>
                     <div className="item3">
-                        Breakdown <br/>
-                        Breakdown <br/>
+                        <FinanceBreakdown/>
                     </div>
                     <div className="item4">
                         <OngoingOrders/>
