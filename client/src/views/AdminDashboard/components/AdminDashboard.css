@@ -1,0 +1,54 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+
+.admin-wrapper {
+    background-image: url('./background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 1.25em;
+}
+
+.title {
+    font-family: 'Questrial', sans-serif;
+    font-size: 3.75em;
+    color: white;
+    margin-bottom: 1.25em;
+}
+
+.grid-container { 
+    display: grid;
+    grid-gap: 0.625em;
+    grid-template-areas:
+    'tracker tracker tracker income income income'
+    'tracker tracker tracker income income income'
+    'tracker tracker tracker income income income'
+    'breakdown breakdown breakdown income income income'
+    'breakdown breakdown  breakdown ongoing ongoing ongoing';
+}
+
+.item1 {grid-area: tracker;}
+.item2 {grid-area: income;}
+.item3 {grid-area: breakdown;}
+.item4 {grid-area: ongoing;}
+
+.ongoing-order-wrapper {
+    background-color: white;
+    color: black;
+    border-radius: 8px;
+    padding: 1.25em 0.5em;
+    display: flex;
+    justify-content: center;
+}
+
+.text-wrapper {
+    margin: auto;
+}
+
+.ongoing-order-wrapper h1 {
+    font-family: 'Questrial', sans-serif;
+    font-style: bold;
+    font-size: 2.5em;
+    display: inline;
+    text-align: center;
+}
