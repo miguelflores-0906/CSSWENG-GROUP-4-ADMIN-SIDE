@@ -3,6 +3,7 @@ import NavBar from '../NavBar/Navbar'
 import './components/AdminDashboard.css'
 import OngoingOrders from './components/OngoingOrders'
 import OrderTracker from './components/OrderTracker'
+import MonthlyIncome from './components/MonthlyIncome'
 
 const AdminDashboard = () => {
     return (
@@ -15,10 +16,7 @@ const AdminDashboard = () => {
                         <OrderTracker/>
                     </div>
                     <div className="item2">
-                        Monthly Income <br/>
-                        Monthly Income <br/>
-                        Monthly Income <br/>
-                        Monthly Income <br/>
+                        <MonthlyIncome />
                     </div>
                     <div className="item3">
                         Breakdown <br/>

@@ -177,3 +177,19 @@
     height: 0.625em;
     margin: auto;
 }
+
+
+
+/* This is for the Monthly Income CSS */
+.monthly-income-wrapper {
+    background-color: white;
+    color:black;
+    border-radius: 8px;
+    padding: 1.5em 2em;
+
+    font-family: "Quicksand", sans-serif;
+}
+
+.monthly-income-wrapper h1 {
+    font-size: 1.875em;
+}
