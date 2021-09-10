@@ -1,0 +1,78 @@
+/* fonts */
+
+
+
+/* Questrial */
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+/* Quicksand */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+
+
+/* This is for the main CSS */
+.main-wrapper {
+    background-image: url('./background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 5.5em 5em;
+}
+
+
+.title {
+    font-family: "Questrial", sans-serif;
+    font-size: 3.75em;
+    color: white;
+    margin-bottom: 1.25em;
+}
+
+
+.card-wrapper {
+    background-color: white;
+    padding: 2em;
+    border-radius: 8px;
+}
+
+
+
+/* Order Header main wrapper */
+
+.order-header-main-wrapper {
+    display: flex;
+    justify-content:space-between;
+
+}
+
+.header-component {
+    display: flex;
+    font-family: "Quicksand", sans-serif;
+    justify-content:space-between;
+}
+
+.header-component p {
+    font-size: 2em;
+}
+
+.edit-order-btn {
+    background-color: #000;
+    color: white;
+    font-size: 1.25em;
+    font-family: 'Quicksand', sans-serif;
+    height: 1.5625em;
+    margin: auto 0;
+    border: none;
+    padding: 4px 1.25em;
+    border-radius: 11px;
+}
+
+.edit-order-btn:hover {
+    cursor: pointer;
+}
+
+
+.order-table-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #e7e9f3;
+    font-family: "Quicksand", sans-serif;
+    font-size: 1.25em;
+}
