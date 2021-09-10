@@ -70,9 +70,34 @@
 
 
 .order-table-header {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
     background-color: #e7e9f3;
     font-family: "Quicksand", sans-serif;
-    font-size: 1.25em;
+    font-size: 0.875em;
+    font-style: bold;
+}
+
+.grid-item {
+    text-align: center;
+    margin: auto;
+}
+
+.grid-item p {
+    font-size: 2.5em;
+}
+
+.order-entry-wrapper {
+    /* display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto; */
+    display: flex;
+    justify-content: space-between;
+    font-family: "Quicksand", sans-serif;
+    font-size: 0.875em;
+}
+
+.edit-logo-btn {
+    height: 22.32px;
+    width: 30px;
+    margin: auto 0;
 }
