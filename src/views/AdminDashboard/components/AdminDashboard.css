@@ -1,0 +1,273 @@
+/* fonts */
+
+
+
+/* Questrial */
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+/* Quicksand */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+
+
+/* This is for the Dashboard's CSS */
+.admin-wrapper {
+    background-image: url('./background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 5.5em 5em;
+}
+
+.title {
+    font-family: 'Questrial', sans-serif;
+    font-size: 3.75em;
+    color: white;
+    margin-bottom: 1.25em;
+}
+
+
+
+/* This is for the Grid CSS */
+.grid-container { 
+    display: grid;
+    grid-gap: 0.625em;
+    grid-template-areas:
+    'tracker tracker tracker income income income'
+    'tracker tracker tracker income income income'
+    'tracker tracker tracker income income income'
+    'breakdown breakdown breakdown income income income'
+    'breakdown breakdown  breakdown ongoing ongoing ongoing';
+}
+
+.item1 {grid-area: tracker;}
+.item2 {grid-area: income;}
+.item3 {grid-area: breakdown;}
+.item4 {grid-area: ongoing;}
+
+
+
+/* This is for the Ongoing Order Grid Area */
+.ongoing-order-wrapper {
+    background-color: white;
+    color: black;
+    border-radius: 8px;
+    padding: 1.25em 0.5em;
+    display: flex;
+    justify-content: center;
+}
+
+.ongoing-order-wrapper h1 {
+    font-family: 'Questrial', sans-serif;
+    font-style: bold;
+    font-size: 2.5em;
+    display: inline;
+    text-align: center;
+}
+
+
+
+/* This is for the OrderTracker CSS */
+.order-tracker-wrapper {
+    background-color: white;
+    color: black;
+    border-radius: 8px;
+}
+
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2em;
+}
+
+.order-header h1 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.875em;
+    font-style: bold;
+}
+
+.add-order-btn {
+    background-color: #000;
+    color: white;
+    font-size: 1.25em;
+    font-family: 'Quicksand', sans-serif;
+    height: 1.5625em;
+    margin: auto 0;
+    border: none;
+    padding: 4px 1.25em;
+    border-radius: 11px;
+}
+
+.add-order-btn:hover {
+    cursor: pointer;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+.order-table-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    padding: 0 4em;
+}
+
+.order-table-header p {
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+    font-size: 0.9375em;
+}
+
+.order-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 4em;
+}
+
+.order-wrapper p {
+    font-family: 'Quicksand', sans-serif;
+    color: black;
+    font-size: 0.9375em;
+}
+
+/* Ongoing and Finished Status */
+
+.ongoing-wrapper {
+    display: flex;
+    justify-content: space-between;
+    background-color: #FFBB95;
+    color: black;
+    font-family: "Quicksand", sans-serif;
+    border-radius: 19px;
+    width: 6.25em;
+    height: 2em;
+    margin: auto 0;
+}
+
+.ongoing-wrapper h1 {
+    font-size: 0.8125em;
+    margin: auto;
+}
+
+.orange {
+    border-radius: 50%;
+    background-color: #D04E05;
+    width: 0.625em;
+    height: 0.625em;
+    margin: auto;
+}
+
+.finished-wrapper {
+    display: flex;
+    justify-content: space-between;
+    background-color: #D1E0BD;
+    color: black;
+    font-family: "Quicksand", sans-serif;
+    border-radius: 19px;
+    width: 6.25em;
+    height: 2em;
+    margin: auto 0;
+}
+
+.finished-wrapper h1 {
+    font-size: 0.8125em;
+    margin: auto;
+}
+
+.green {
+    border-radius: 50%;
+    background-color: #3D9528;
+    width: 0.625em;
+    height: 0.625em;
+    margin: auto;
+}
+
+
+
+/* This is for the Monthly Income CSS */
+.monthly-income-wrapper {
+    background-color: white;
+    color:black;
+    border-radius: 8px;
+    padding: 1.5em 2em;
+
+    font-family: "Quicksand", sans-serif;
+}
+
+.monthly-income-wrapper h1 {
+    font-size: 1.875em;
+}
+
+
+
+/* This is for the Finance Breakdown CSS */
+.finance-breakdown-wrapper {
+    background-color: white;
+    color:black;
+    border-radius: 8px;
+
+    font-family: "Quicksand", sans-serif;
+}
+
+.finance-breakdown-header {
+    display: flex;
+    justify-content: space-between;
+    margin:0;
+    padding: 1.5em 2em;
+    border-bottom: 1px solid black;
+}
+
+.finance-dropdown {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+    border-radius: 8px;
+    height: 1.5625em;
+}
+
+.finance-dropdown p {
+    font-size: 0.875em;
+    margin: auto 5px;
+}
+
+.view-breakdown-btn {
+    background-color: #000;
+    color: white;
+    font-size: 1.25em;
+    font-family: 'Quicksand', sans-serif;
+    height: 1.5625em;
+    margin: auto 0;
+    border: none;
+    padding: 4px 1.25em;
+    border-radius: 11px;
+}
+
+.view-breakdown-btn:hover {
+    cursor: pointer;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+.finance-summary {
+    display: flex;
+    justify-content: space-between;
+}
+
+.expense-summary {
+    margin: auto 4em;
+}
+
+.expense-summary h2 {
+    font-size: 1.25em;
+}
+
+.expense-display {
+    display: flex;
+    justify-content: space-between;
+}
+
+.expense-display h1 {
+    font-size: 1.875em;
+    margin: auto 0.5em auto 0;
+}
+
+.finance-logo {
+    width: 17px;
+    height: 17px;
+    margin: auto;
+}
