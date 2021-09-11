@@ -23,7 +23,8 @@ const OrderEntry = () => {
                 <p>BROWN</p>
             </div>
             <div className="grid-item">
-                <img src={logo} alt="edit" className="edit-logo-btn"/>
+                {/* <img src={logo} alt="edit" className="edit-logo-btn"/> */}
+                <button className="edit-logo-btn"/>
             </div>
         </div>
     )

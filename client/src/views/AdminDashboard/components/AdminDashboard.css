@@ -101,14 +101,17 @@
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
 }
 
-.order-table-header {
+.order-tracker-table-header {
     display: flex;
     justify-content: space-between;
     background-color: black;
     padding: 0 4em;
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+    font-size: 0.9375em;
 }
 
-.order-table-header p {
+.order-tracker-table-headerr p {
     font-family: 'Quicksand', sans-serif;
     color: white;
     font-size: 0.9375em;

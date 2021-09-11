@@ -43,7 +43,7 @@ const OrderTracker = () => {
                 <h1>ORDER TRACKER</h1>
                 <button className="add-order-btn"> +  ADD ORDER</button>
             </div>
-            <div className="order-table-header">
+            <div className="order-tracker-table-header">
                 <p>CONTACT PERSON</p>
                 <p>LOCATION</p>
                 <p>ORDER STATUS</p>
