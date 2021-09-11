@@ -102,6 +102,10 @@
     font-size: 0.875em;
 }
 
+.order-entry-wrapper p {
+    font-size: 1.25em;
+}
+
 .edit-logo-btn {
     height: 25px;
     width: 30px;
@@ -184,6 +188,7 @@
     border-radius: 11px;
     height: 2em;
     margin: auto 0.5em;
+    width: 6.5em;
 }
 
 .delete-btn:hover {
@@ -198,6 +203,7 @@
     border-radius: 11px;
     height: 2em;
     margin: auto 0.5em;
+    width: 6.5em;
 }
 
 .save-btn:hover {

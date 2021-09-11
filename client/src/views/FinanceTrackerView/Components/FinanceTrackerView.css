@@ -18,11 +18,30 @@
 }
 
 
-.title {
+.title-name {
     font-family: "Questrial", sans-serif;
     font-size: 3.75em;
     color: white;
     margin-bottom: 1.25em;
+    margin: auto 0;
+}
+
+.title-div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title-date {
+    display: flex;
+    margin-top: 4.5em;
+}
+
+.title-date-header {
+    font-family: "Questrial", sans-serif;
+    font-size: 1.875em;
+    color: white;
+    margin-bottom: 1.25em;
+    margin: auto 0;
 }
 
 
@@ -30,4 +49,57 @@
     background-color: white;
     padding: 2em;
     border-radius: 8px;
+}
+
+.double-wrapper {
+    display: grid;
+    grid-gap: 0.625em;
+    grid-template-areas:
+    'expenses expenses expenses revenue revenue revenue';
+}
+
+.card1 {grid-area: expenses;}
+.card2 {grid-area: revenue;}
+
+.finance-card-title {
+    font-family: "Quicksand", sans-serif;
+    font-size: 1.875em;
+    margin: auto 0;
+}
+
+.finance-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #e7e9f3;
+    font-family: "Quicksand", sans-serif;
+}
+
+.finance-footer {
+    display: flex;
+    justify-content: space-between;
+    
+    font-family: "Quicksand", sans-serif;
+}
+
+.finance-btn {
+    border:none;
+    border-radius: 11px;
+    width: 10.875em;
+    height: 1.625em;
+    color: white;
+    background-color: black;
+    font-family: "Quicksand", sans-serif;
+    font-size: 0.9275em;
+    margin: auto 0;
+}
+
+.finance-footer-text {
+    display: flex;
+    justify-content: space-between;
+    
+    font-family: "Quicksand", sans-serif;
+}
+
+.finance-footer-text h1 {
+    font-size: 1.25em;
 }
