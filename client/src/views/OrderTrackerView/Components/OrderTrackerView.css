@@ -185,6 +185,10 @@
     height: 2em;
     margin: auto 0.5em;
 }
+
+.delete-btn:hover {
+    cursor: pointer;
+}
 .save-btn {
     background-color: #55b845;
     color: white;
@@ -194,4 +198,8 @@
     border-radius: 11px;
     height: 2em;
     margin: auto 0.5em;
+}
+
+.save-btn:hover {
+    cursor: pointer;
 }
