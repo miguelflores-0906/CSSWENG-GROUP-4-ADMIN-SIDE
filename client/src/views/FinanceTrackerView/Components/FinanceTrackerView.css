@@ -1,0 +1,33 @@
+/* fonts */
+
+
+
+/* Questrial */
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+/* Quicksand */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+
+
+/* This is for the main CSS */
+.main-wrapper {
+    background-image: url('./background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 5.5em 5em;
+}
+
+
+.title {
+    font-family: "Questrial", sans-serif;
+    font-size: 3.75em;
+    color: white;
+    margin-bottom: 1.25em;
+}
+
+
+.card-wrapper {
+    background-color: white;
+    padding: 2em;
+    border-radius: 8px;
+}
