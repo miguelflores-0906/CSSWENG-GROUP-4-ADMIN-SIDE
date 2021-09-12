@@ -1,24 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import AdminDashboard from './views/AdminDashboard/AdminDashboard'
+import OrderTrackerView from './views/OrderTrackerView/OrderTrackerView'
+import FinanceTrackerView from './views/FinanceTrackerView/FinanceTrackerView'
+import AddExpense from './views/Forms/AddExpense'
+import AddRevenue from './views/Forms/AddRevenue'
+import AddItem from './views/Forms/AddItem';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <Switch>
+          <Route path="/" exact component={AdminDashboard}/>
+          <Route path="/order" exact component={OrderTrackerView}/>
+          <Route path="/finance" exact component={FinanceTrackerView}/>
+          <Route path="/addExpense" exact component={AddExpense}/>
+          <Route path="/addRevenue" exact component={AddRevenue}/>
+          <Route path="/addItem" exact component={AddItem}/>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 

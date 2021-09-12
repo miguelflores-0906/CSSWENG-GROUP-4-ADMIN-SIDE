@@ -1,0 +1,57 @@
+/* fonts */
+
+
+
+/* Questrial */
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+/* Quicksand */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+
+.overall-wrapper {
+    background-color: black;
+}
+
+.form-card{
+    margin: 20em 42.8em;
+    padding: 2em;
+    box-shadow: 4px 4px 4px #888888;
+    border: 1px solid #888888;
+    border-radius: 44px;
+}
+
+.form-card h1 {
+    font-family: "Quicksand" , sans-serif;
+    font-size: 3.125em;
+}
+
+.form-wrapper {
+    font-family: "Quicksand" , sans-serif;
+    font-size: 1.5625em;
+}
+
+.form-wrapper label {
+    text-align: left;
+    float: left;
+    margin-right: 2em;
+}
+
+.form-wrapper input {
+    float: right;
+    margin: auto 0;
+    height: 1.7em;
+    width: 16.875em;
+}
+
+.form-wrapper select {
+    float: right;
+    height: 1.7em;
+    width: 17.33em;
+    font-family: "Quicksand" , sans-serif;
+}
+
+.form-buttons {
+    display:flex;
+    justify-content:space-between;
+    margin-top: 2em;
+}

@@ -1,0 +1,211 @@
+/* fonts */
+
+
+
+/* Questrial */
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+/* Quicksand */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+
+
+/* This is for the main CSS */
+.main-wrapper {
+    background-image: url('./background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 5.5em 5em;
+}
+
+
+.title {
+    font-family: "Questrial", sans-serif;
+    font-size: 3.75em;
+    color: white;
+    margin-bottom: 1.25em;
+}
+
+
+.card-wrapper {
+    background-color: white;
+    padding: 2em;
+    border-radius: 8px;
+}
+
+
+
+/* Order Header main wrapper */
+
+.order-header-main-wrapper {
+    display: flex;
+    justify-content:space-between;
+
+}
+
+.header-component {
+    display: flex;
+    font-family: "Quicksand", sans-serif;
+    justify-content:space-between;
+    margin: auto 0;
+}
+
+.header-component h1 {
+    margin: auto 0;
+}
+
+.header-component p {
+    font-size: 2em;
+    margin: auto 0;
+}
+
+.edit-order-btn {
+    background-color: #000;
+    color: white;
+    font-size: 1.25em;
+    font-family: 'Quicksand', sans-serif;
+    height: 1.5625em;
+    margin: auto 0;
+    border: none;
+    padding: 4px 1.25em;
+    border-radius: 11px;
+}
+
+.edit-order-btn:hover {
+    cursor: pointer;
+}
+
+
+.order-table-header {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    background-color: #e7e9f3;
+    font-family: "Quicksand", sans-serif;
+    font-size: 0.875em;
+    font-style: bold;
+}
+
+.grid-item {
+    text-align: center;
+    margin: auto;
+}
+
+.grid-item p {
+    font-size: 1.25em;
+}
+
+.order-entry-wrapper {
+    /* display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto; */
+    display: flex;
+    justify-content: space-between;
+    font-family: "Quicksand", sans-serif;
+    font-size: 0.875em;
+}
+
+.order-entry-wrapper p {
+    font-size: 1.25em;
+}
+
+.edit-logo-btn {
+    height: 25px;
+    width: 30px;
+    margin: auto 0;
+    background: url(./edit-icon.png);
+    border: none;
+}
+
+.edit-logo-btn:hover {
+    cursor: pointer;
+}
+
+.others-wrapper {
+    display: flex;
+    justify-content: space-between;
+    font-family: "Quicksand", sans-serif;
+    padding: auto 5em;
+}
+
+.others-wrapper p {
+    font-size: 1.25em;
+}
+
+.others-desc {
+    display: flex;
+    justify-content: space-between;
+}
+
+.others-desc-bold {
+    font-size: 1.5em;
+    font-style: bold;
+}
+
+.others-desc-norm {
+    font-size: 1.25em;
+}
+
+.order-footer {
+    display: flex;
+    justify-content: space-between;
+    font-family: "Quicksand", sans-serif;
+}
+
+.payment-div {
+    display: flex;
+}
+
+.payment-details {
+    font-family: "Quicksand", sans-serif;
+    font-size: 1.25em;
+    height: 1.5em;
+    margin: auto .5em;
+}
+
+.status-wrapper {
+    font-family: "Quicksand", sans-serif;
+    display: flex;
+    justify-content: space-between;
+}
+
+.status-component-wrapper {
+    display: flex;
+}
+
+.status-wrapper h1 {
+    font-size: 2em;
+    margin: auto 0;
+}
+
+.status-wrapper p {
+    font-size: 2em;
+}
+
+.delete-btn {
+    background-color: #bd2828;
+    color: white;
+    font-size: 0.9375em;
+    font-family: "Quicksand", sans-serif;
+    border:none;
+    border-radius: 11px;
+    height: 2em;
+    margin: auto 0.5em;
+    width: 6.5em;
+}
+
+.delete-btn:hover {
+    cursor: pointer;
+}
+.save-btn {
+    background-color: #55b845;
+    color: white;
+    font-size: 0.9375em;
+    font-family: "Quicksand", sans-serif;
+    border:none;
+    border-radius: 11px;
+    height: 2em;
+    margin: auto 0.5em;
+    width: 6.5em;
+}
+
+.save-btn:hover {
+    cursor: pointer;
+}
