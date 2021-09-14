@@ -2,10 +2,10 @@ let mongoose = require('mongoose'),
   express = require('express'),
   router = express.Router();
 
-// Student Model
+// Expense Model
 let expenseSchema = require('../models/expense');
 
-// CREATE Student
+// CREATE Expense
 router.route('/create-expense').post((req, res, next) => {
   expenseSchema.create(req.body, (error, data) => {
     if (error) {
@@ -17,7 +17,7 @@ router.route('/create-expense').post((req, res, next) => {
   })
 });
 
-// READ Students
+// READ Expense
 router.route('/').get((req, res) => {
   expenseSchema.find((error, data) => {
     if (error) {
@@ -28,7 +28,7 @@ router.route('/').get((req, res) => {
   })
 })
 
-// Get Single Student
+// Get Single Expense
 router.route('/edit-expense/:id').get((req, res) => {
   expenseSchema.findById(req.params.id, (error, data) => {
     if (error) {
@@ -40,7 +40,7 @@ router.route('/edit-expense/:id').get((req, res) => {
 })
 
 
-// Update Student
+// Update Expense
 router.route('/update-expense/:id').put((req, res, next) => {
   expenseSchema.findByIdAndUpdate(req.params.id, {
     $set: req.body
@@ -55,7 +55,7 @@ router.route('/update-expense/:id').put((req, res, next) => {
   })
 })
 
-// Delete Student
+// Delete Expense
 router.route('/delete-expense/:id').delete((req, res, next) => {
   expenseSchema.findByIdAndRemove(req.params.id, (error, data) => {
     if (error) {
