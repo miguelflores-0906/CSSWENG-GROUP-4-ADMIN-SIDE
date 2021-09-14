@@ -3,7 +3,7 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import AdminDashboard from './views/AdminDashboard/AdminDashboard'
 import OrderTrackerView from './views/OrderTrackerView/OrderTrackerView'
 import FinanceTrackerView from './views/FinanceTrackerView/FinanceTrackerView'
-import AddExpense from './views/Forms/AddExpense'
+import AddExpense from './views/Forms/AddExpense.component'
 import AddRevenue from './views/Forms/AddRevenue'
 import AddItem from './views/Forms/AddItem';
 
