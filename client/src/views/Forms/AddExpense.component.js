@@ -60,7 +60,7 @@ export default class AddExpense extends Component{
       return (
       // <div className="form-wrapper">
       <div className="form-card">
-                <h1>ADD EXPENSE</h1>
+        <h1>ADD EXPENSE</h1>
         <form id="addExpense" className="form-wrapper" onSubmit={this.onSubmit}>
             <label>NAME:</label>
             <input type="text" name="expense-name" value={this.state.name} onChange={this.onChangeExpenseName}/>
@@ -76,9 +76,9 @@ export default class AddExpense extends Component{
             <br/>
         </form>
         <div className="form-buttons">
-                    <button className="delete-btn">CANCEL</button>
-                    <button className="save-btn" type="submit" form="addExpense">ADD</button>
-                </div>
+          <button className="delete-btn">CANCEL</button>
+          <button className="save-btn" type="submit" form="addExpense">ADD</button>
+        </div>
       </div>);
     }
   }
