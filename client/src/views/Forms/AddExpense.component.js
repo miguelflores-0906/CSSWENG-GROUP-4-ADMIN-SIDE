@@ -66,6 +66,9 @@ export default class AddExpense extends Component{
       else if (this.state.receiptno === '') {
         this.setState({errorMsg: "Receipt No. must not be empty. Please enter a receipt number or type 'n/a'."});
       }
+      else if (this.state.receiptno !== 'n/a' && !(/^\d+$/.test(this.state.receiptno))) {
+        this.setState({errorMsg: "Receipt No. must not contain any characters except numbers"})
+      }
       else {
         axios.post('http://localhost:3000/expenses/create-expense', expenseObject)
           .then(res => console.log(res.data));
