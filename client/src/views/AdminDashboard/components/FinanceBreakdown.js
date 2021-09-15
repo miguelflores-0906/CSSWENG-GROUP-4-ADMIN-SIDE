@@ -1,6 +1,7 @@
 import React from 'react'
 import expense from './expense.png'
 import revenue from './revenue.png'
+import { Link } from 'react-router-dom'
 
 const FinanceBreakdown = () => {
     return (
@@ -11,7 +12,9 @@ const FinanceBreakdown = () => {
                     <p>AUGUST 2021</p>
                     <p>v</p>
                 </div>
-                <button className="view-breakdown-btn">VIEW BREAKDOWN</button>
+                <Link to='/finance'>
+                    <button className="view-breakdown-btn">VIEW BREAKDOWN</button>
+                </Link>
             </div>
             <div className="finance-summary">
                 <div className="expense-summary">

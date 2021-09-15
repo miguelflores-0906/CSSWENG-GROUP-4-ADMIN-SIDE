@@ -1,5 +1,6 @@
 import React from 'react'
 import './forms.css'
+import {Link} from 'react-router-dom'
 
 const AddItem = () => {
     return (
@@ -33,7 +34,9 @@ const AddItem = () => {
                     <br/>
                 </form>
                 <div className="form-buttons">
-                    <button className="delete-btn">CANCEL</button>
+                    <Link to='/order'>
+                        <button className="delete-btn">CANCEL</button>
+                    </Link>
                     <button className="save-btn" type="submit" form="addRevenue">ADD</button>
                 </div>
             </div>

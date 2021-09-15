@@ -3,6 +3,7 @@ import './Components/FinanceTrackerView.css'
 import NavBar from '../NavBar/Navbar'
 import ExpensesTracker from './Components/ExpensesTracker'
 import RevenueTracker from './Components/RevenueTracker'
+import {Link} from 'react-router-dom'
 
 const FinanceTrackerView = () => {
     return (
@@ -15,7 +16,9 @@ const FinanceTrackerView = () => {
                         <h1 className="title-name">FINANCE TRACKER</h1>
                         <h2 className="title-date-header">AUGUST 2021</h2>
                     </div>
-                    <button className="save-btn">SAVE</button>
+                    <Link style={{marginTop: '5.6em'}} to="/">
+                        <button className="save-btn">SAVE</button>
+                    </Link>
                 </div>
 
                 <div className="double-wrapper">

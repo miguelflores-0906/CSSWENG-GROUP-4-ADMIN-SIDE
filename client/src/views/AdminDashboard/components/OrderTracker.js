@@ -1,5 +1,6 @@
 import React from 'react'
 import Order from './Order'
+import {Link} from 'react-router-dom'
 
 const OrderTracker = () => {
 
@@ -41,7 +42,9 @@ const OrderTracker = () => {
         <div className="order-tracker-wrapper">
             <div className="order-header">
                 <h1>ORDER TRACKER</h1>
-                <button className="add-order-btn"> +  ADD ORDER</button>
+                <Link style={{marginTop: '1.5em'}} to='/order'>
+                    <button className="add-order-btn"> +  ADD ORDER</button>
+                </Link>
             </div>
             <div className="order-tracker-table-header">
                 <p>CONTACT PERSON</p>

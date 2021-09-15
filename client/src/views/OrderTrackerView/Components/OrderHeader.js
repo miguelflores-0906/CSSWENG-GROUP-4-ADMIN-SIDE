@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 const OrderHeader = () => {
     return (
@@ -11,7 +12,11 @@ const OrderHeader = () => {
                 <h1>LOCATION: </h1>
                 <p>Malate, Manila</p>
             </div>
-            <button className="edit-order-btn">EDIT</button>
+
+
+            <Link to="/addItem">
+                <button className="edit-order-btn">EDIT</button>
+            </Link>
         </div>
     )
 }

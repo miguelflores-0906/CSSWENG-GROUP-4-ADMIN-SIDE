@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 const OrderStatus = () => {
     return (
@@ -8,8 +9,14 @@ const OrderStatus = () => {
                 <p>ONGOING</p>
             </div>
             <div className="status-component-wrapper">
-                <button className="delete-btn">DELETE</button>
-                <button className="save-btn">SAVE</button>
+                <Link to='/' style={{marginTop: '3em'}}>
+                    <button className="delete-btn">DELETE</button>
+                </Link>
+
+                
+                <Link to='/' style={{marginTop: '3em'}}>
+                    <button className="save-btn">SAVE</button>
+                </Link>
             </div>
         </div>
     )
