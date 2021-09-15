@@ -8,7 +8,7 @@ const OngoingOrders = () => {
                 ONGOING ORDERS:
             </h1>
             <h1>
-                5
+                6
             </h1>
         </div>
     )
