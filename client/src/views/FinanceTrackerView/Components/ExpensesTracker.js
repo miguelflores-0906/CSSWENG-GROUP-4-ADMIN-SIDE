@@ -1,5 +1,6 @@
 import React from 'react'
 import FinanceEntry from './FinanceEntry'
+import {Link} from 'react-router-dom'
 
 const ExpensesTracker = () => {
     return (
@@ -32,7 +33,9 @@ const ExpensesTracker = () => {
             <FinanceEntry/>
             <hr/>
             <div className="finance-footer">
-                <button className="finance-btn">+ ADD EXPENSE</button>
+                <Link style={{textDecoration: 'none', marginTop: '1em'}} to="/addExpense">
+                    <button className="finance-btn">+ ADD EXPENSE</button>
+                </Link>
                 <div className="finance-footer-text">
                     <h1>TOTAL: P</h1>
                     <h1>50,000.00</h1>

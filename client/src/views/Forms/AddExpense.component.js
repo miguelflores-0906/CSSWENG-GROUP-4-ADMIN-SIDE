@@ -2,6 +2,7 @@ import React, {useState, useContext, Component} from 'react'
 //import { GlobalContext } from './context/GlobalState';
 import axios from 'axios';
 import './forms.css'
+import {Link} from 'react-router-dom'
 
 
 export default class AddExpense extends Component{
@@ -21,7 +22,9 @@ export default class AddExpense extends Component{
         name: '',
         supplier: '',
         receiptno: '',
-        price: ''
+        price: '',
+        errorMsg: '',
+        goodMsg: ''
       }
     }
   
@@ -50,11 +53,30 @@ export default class AddExpense extends Component{
         receiptno: this.state.receiptno,
         price: this.state.price
       };
-      axios.post('http://localhost:3000/expenses/create-expense', expenseObject)
-        .then(res => console.log(res.data));
-  
-      this.setState({ name: '', supplier: '', receiptno: '', price: '' })
+
+      if (this.state.price < 0 || this.state.price === '') {
+        this.setState({errorMsg: "Price must be greater than or equal to zero."});
+      }
+      else if (this.state.name === '') {
+        this.setState({errorMsg: "Name must not be empty. Please enter a short but descriptive name."});
+      }
+      else if (this.state.supplier === '') {
+        this.setState({errorMsg: "Supplier must not be empty. Please enter the name of the supplier."});
+      }
+      else if (this.state.receiptno === '') {
+        this.setState({errorMsg: "Receipt No. must not be empty. Please enter a receipt number or type 'n/a'."});
+      }
+      else {
+        axios.post('http://localhost:3000/expenses/create-expense', expenseObject)
+          .then(res => console.log(res.data));
+
+        this.setState({errorMsg: ""})
+        this.setState({goodMsg: "Expense added successfully."});
+        this.setState({ name: '', supplier: '', receiptno: '', price: '' })
+        this.props.history.push("/finance")
+      }
     }
+
   
     render() {
       return (
@@ -76,9 +98,13 @@ export default class AddExpense extends Component{
             <br/>
         </form>
         <div className="form-buttons">
-          <button className="delete-btn">CANCEL</button>
+          <Link style={{textDecoration: 'none'}} to="/finance">
+            <button className="delete-btn">CANCEL</button>
+          </Link>
           <button className="save-btn" type="submit" form="addExpense">ADD</button>
         </div>
+        <p className="error-message">{this.state.errorMsg}</p>
+        <p className="good-message">{this.state.goodMsg}</p>
       </div>);
     }
   }

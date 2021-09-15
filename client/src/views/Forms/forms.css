@@ -55,3 +55,15 @@
     justify-content:space-between;
     margin-top: 2em;
 }
+
+.error-message {
+    color: red;
+    font-family: "Quicksand" , sans-serif;
+    font-size: 1.5em;
+}
+
+.good-message {
+    color: green;
+    font-family: "Quicksand" , sans-serif;
+    font-size: 1.5em;
+}
