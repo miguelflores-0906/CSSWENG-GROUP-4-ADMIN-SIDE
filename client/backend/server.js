@@ -5,7 +5,9 @@ let bodyParser = require('body-parser');
 let dbConfig = require('./database/db');
 
 // Express Route
-const expenseRoute = require('./routes/expense-routes')
+const expenseRoute = require('./routes/expense-routes');
+const orderRoute = require('./routes/order-routes');
+const revenueRoute = require('./routes/revenue-routes');
 
 // Connecting mongoDB Database
 mongoose.Promise = global.Promise;
@@ -25,7 +27,11 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 app.use(cors());
-app.use('/expenses', expenseRoute)
+app.use('/expenses', expenseRoute),
+app.use(cors());
+app.use('/orders', orderRoute),
+app.use(cors());
+app.use('/revenues', revenueRoute)
 
 
 // PORT
