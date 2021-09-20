@@ -34,7 +34,7 @@ const RevenueTracker = () => {
             <hr/>
             <div className="finance-footer">
 
-                <Link style={{textDecoration: 'none', marginTop: '1em'}} to="/addExpense">
+                <Link style={{textDecoration: 'none', marginTop: '1em'}} to="/addRevenue">
                     <button className="finance-btn">+ ADD REVENUE</button>
                 </Link>
                 <div className="finance-footer-text">

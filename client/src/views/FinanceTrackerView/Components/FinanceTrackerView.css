@@ -103,3 +103,11 @@
 .finance-footer-text h1 {
     font-size: 1.25em;
 }
+
+.entries {
+    padding: 0;
+}
+
+.entries li {
+    list-style: none;
+}

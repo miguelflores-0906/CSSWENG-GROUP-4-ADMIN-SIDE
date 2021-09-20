@@ -1,6 +1,7 @@
 import React, {useState, useContext, Component} from 'react'
 import axios from 'axios';
 import './forms.css'
+import {Link} from 'react-router-dom'
 
 export default class AddRevenue extends Component{
 
@@ -63,8 +64,8 @@ export default class AddRevenue extends Component{
                     <label>NAME:</label>
                     <input type="text" name="revenue-name" value={this.state.name} onChange={this.onChangeRevenueName}/>
                     <br/>
-                    <label>PAYMENT (PARTIAL / FULL):</label>
-                    <input type="text" name="revenue-payment" value={this.state.payment} onChange={this.onChangeRevenuePayment}/>
+                    <label>PAYMENT:</label>
+                    <input type="text" name="revenue-payment" value={this.state.payment} onChange={this.onChangeRevenuePayment} placeholder="Partial/Full"/>
                     <br/>
                     <label>CLIENT:</label>
                     <input type="text" name="revenue-client" value={this.state.client} onChange={this.onChangeRevenueClient}/>
@@ -74,7 +75,9 @@ export default class AddRevenue extends Component{
                     <br/>
                 </form>
                 <div className="form-buttons">
+                  <Link style={{textDecoration: 'none'}} to="/finance">
                     <button className="delete-btn">CANCEL</button>
+                  </Link>
                     <button className="save-btn" type="submit" form="addRevenue">ADD</button>
                 </div>
             </div>
