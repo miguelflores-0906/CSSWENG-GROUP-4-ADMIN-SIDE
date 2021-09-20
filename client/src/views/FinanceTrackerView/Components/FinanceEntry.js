@@ -1,19 +1,19 @@
 import React from 'react'
 
-const FinanceEntry = () => {
+const FinanceEntry = (props) => {
     return (
         <div className="order-entry-wrapper">
             <div className="grid-item">
-                <p>NAME</p>
+                <p>{props.name}</p>
             </div>
             <div className="grid-item">
-                <p>WILCON</p>
+                <p>{props.second}</p>
             </div>
             <div className="grid-item">
-                <p>RECEIPT NO</p>
+                <p>{props.third}</p>
             </div>
             <div className="grid-item">
-                <p>PRICE</p>
+                <p>{props.price}</p>
             </div>
             <div className="grid-item">
                 <button className="edit-logo-btn"/>

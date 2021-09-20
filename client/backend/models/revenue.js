@@ -4,19 +4,19 @@ const Schema = mongoose.Schema;
 let revenueSchema = new Schema({
   name: {
     type: String,
-    required: true
+    // required: true
   },
   payment: {
     type: String,
-    required: true
+    // required: true
   },
   client: {
     type: String,
-    required: true
+    // required: true
   },
   price: {
     type: Number,
-    required: true
+    // required: true
   }
 }, {
     collection: 'revenues'

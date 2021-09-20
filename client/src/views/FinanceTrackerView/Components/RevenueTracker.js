@@ -1,8 +1,37 @@
 import React from 'react'
+import { useState, useEffect } from 'react'
 import FinanceEntry from './FinanceEntry'
 import {Link} from 'react-router-dom'
+import axios from 'axios'
 
 const RevenueTracker = () => {
+
+    const [revenues, setRevenues] = useState("")
+
+    const [totalRevenue, setTotalRevenue] = useState("50,000.00")
+
+    const updateRevenues = (revArray) => setRevenues(revArray.data.map((revenue, index) => {
+        return (
+            <FinanceEntry 
+                name = {revenue.name}
+                second = {revenue.payment}
+                third = {revenue.client}
+                price = {revenue.price}
+            />
+        )
+    }))
+
+    useEffect(() => {
+        axios.get('http://localhost:3000/revenues/')
+            .then(res => {
+                console.log(res)
+                updateRevenues(res)
+            })
+            .catch(err => {
+                console.log(err)
+            })
+    }, [])
+
     return (
         <div className="card-wrapper">
             <h1 className="finance-card-title">REVENUE</h1>
@@ -23,18 +52,15 @@ const RevenueTracker = () => {
                     <h1>EDIT</h1>
                 </div>
             </div>
-            <FinanceEntry/>
-            <FinanceEntry/>
-            <FinanceEntry/>
-            <FinanceEntry/>
-            <FinanceEntry/>
-            <FinanceEntry/>
-            <FinanceEntry/>
-            <FinanceEntry/>
+            <div className="entries">
+                <ul>
+                    {revenues}
+                </ul>
+            </div>
             <hr/>
             <div className="finance-footer">
 
-                <Link style={{textDecoration: 'none', marginTop: '1em'}} to="/addExpense">
+                <Link style={{textDecoration: 'none', marginTop: '1em'}} to="/addRevenue">
                     <button className="finance-btn">+ ADD REVENUE</button>
                 </Link>
                 <div className="finance-footer-text">
