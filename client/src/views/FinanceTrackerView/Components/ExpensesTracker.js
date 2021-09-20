@@ -8,7 +8,9 @@ const ExpensesTracker = () => {
 
     const [expenses, setExpenses] = useState("")
 
-    const updateExpenses = (expenseArray) => setExpenses(expenseArray.data.reverse().map((expense, index) => {
+    const [totalExpense, setTotalExpense] = useState("50,000.00")
+
+    const updateExpenses = (expenseArray) => setExpenses(expenseArray.data.map((expense, index) => {
         return (
             <FinanceEntry 
                 name = {expense.name} 
@@ -19,14 +21,17 @@ const ExpensesTracker = () => {
         )
     }))
 
+    const updateTotal = (expenseArray) => setTotalExpense("kekw")
+
     useEffect(() => {
-        axios.post('http://localhost:3000/expenses/')
+        axios.get('http://localhost:3000/expenses/')
             .then(res => {
                 console.log(res)
                 updateExpenses(res)
+                console.log(res.data.reverse())
             })
             .catch(err => {
-                console.error(err)
+                console.error(err.response.data)
             })
     }, [])
 
@@ -51,7 +56,6 @@ const ExpensesTracker = () => {
                     <h1>EDIT</h1>
                 </div>
             </div>
-            <FinanceEntry/>
             <div className="entries">
                 <ul>
                     {expenses}
@@ -64,7 +68,7 @@ const ExpensesTracker = () => {
                 </Link>
                 <div className="finance-footer-text">
                     <h1>TOTAL: P</h1>
-                    <h1>50,000.00</h1>
+                    <h1>{totalExpense}</h1>
                 </div>
             </div>
         </div>

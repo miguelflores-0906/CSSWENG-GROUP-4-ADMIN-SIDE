@@ -45,15 +45,17 @@ export default class AddRevenue extends Component{
     
         const revenueObject = {
           name: this.state.name,
-          supplier: this.state.payment,
-          receiptno: this.state.client,
+          payment: this.state.payment,
+          client: this.state.client,
           price: this.state.price
         };
         axios.post('http://localhost:3000/revenues/create-revenue', revenueObject)
           .then(res => console.log(res.data));
     
         this.setState({ name: '', payment: '', client: '', price: '' })
+        this.props.history.push("/finance")
       }
+
 
     render() {
     return (
