@@ -49,11 +49,33 @@ export default class AddRevenue extends Component{
           client: this.state.client,
           price: this.state.price
         };
-        axios.post('http://localhost:3000/revenues/create-revenue', revenueObject)
-          .then(res => console.log(res.data));
-    
-        this.setState({ name: '', payment: '', client: '', price: '' })
-        this.props.history.push("/finance")
+
+        if (this.state.price < 0 || this.state.price === '') {
+          this.setState({errorMsg: "Price must be greater than or equal to zero."});
+        }
+        else if (this.state.name === '') {
+          this.setState({errorMsg: "Name must not be empty. Please enter a short but descriptive name."});
+        }
+        else if (this.state.client === '') {
+          this.setState({errorMsg: "Client must not be empty. Please enter the name of the client."});
+        }
+        else if (this.state.payment === '') {
+          this.setState({errorMsg: "Payment must not be empty. Please enter 'Full' or 'Partial'."});
+        }
+        else if (this.state.payment === 'Full' || this.state.payment === 'Partial') {
+          axios.post('http://localhost:3000/revenues/create-revenue', revenueObject)
+            .then(res => console.log(res.data));
+      
+          this.setState({errorMsg: ""})
+          this.setState({goodMsg: "Expense added successfully."});
+          this.setState({ name: '', payment: '', client: '', price: '' })
+          this.props.history.push("/finance")
+        }
+        else {
+          this.setState({errorMsg: "Payment should only be 'Full' or 'Partial'."});
+        }
+
+
       }
 
 
@@ -82,6 +104,8 @@ export default class AddRevenue extends Component{
                   </Link>
                     <button className="save-btn" type="submit" form="addRevenue">ADD</button>
                 </div>
+                <p className="error-message">{this.state.errorMsg}</p>
+                <p className="good-message">{this.state.goodMsg}</p>
             </div>
         </div>
     )
