@@ -4,8 +4,8 @@ import AdminDashboard from './views/AdminDashboard/AdminDashboard'
 import OrderTrackerView from './views/OrderTrackerView/OrderTrackerView'
 import FinanceTrackerView from './views/FinanceTrackerView/FinanceTrackerView'
 import AddExpense from './views/Forms/AddExpense.component'
-import AddRevenue from './views/Forms/AddRevenue'
-import AddItem from './views/Forms/AddItem';
+import AddRevenue from './views/Forms/AddRevenue.component'
+import AddItem from './views/Forms/AddItem.component';
 
 function App() {
   return (
