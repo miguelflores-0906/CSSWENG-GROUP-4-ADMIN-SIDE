@@ -7,12 +7,12 @@ let revenueSchema = new Schema({
     required: true
   },
   payment: {
-    type: String,
-    required: true
+    type: String
+    
   },
   client: {
-    type: String,
-    required: true
+    type: String
+    
   },
   price: {
     type: Number,
